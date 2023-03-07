@@ -11,7 +11,7 @@ def load_requirements(fname: Path):
 
 
 setup(
-    name='test_upload',
+    name='test_loader',
     version='1.0.0',
     packages=find_packages(),
     url='',
