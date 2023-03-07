@@ -1,8 +1,8 @@
 from pathlib import Path
 
 from runassociationtesting.module_loader import ModuleLoader
-from test_upload import test_upload_ingester
-from test_upload.test_upload_association_pack import TestUploadProgramArgs, TestUploadAssociationPack
+from test_loader import test_loader_ingester
+from test_loader.test_loader_association_pack import TestLoaderProgramArgs, TestLoaderAssociationPack
 
 
 class LoadModule(ModuleLoader):
@@ -27,9 +27,9 @@ class LoadModule(ModuleLoader):
                                        "output for burden tests where tool = saige, regenie, or bolt.",
                                   dest='run_marker_tests', action='store_true')
 
-    def _parse_options(self) -> TestUploadProgramArgs:
-        return TestUploadProgramArgs(**vars(self._parser.parse_args(self._split_options(self._input_args))))
+    def _parse_options(self) -> TestLoaderProgramArgs:
+        return TestLoaderProgramArgs(**vars(self._parser.parse_args(self._split_options(self._input_args))))
 
-    def _ingest_data(self, parsed_options: TestUploadProgramArgs) -> TestUploadAssociationPack:
-        ingested_data = test_upload_ingester.IngestData(parsed_options)
+    def _ingest_data(self, parsed_options: TestLoaderProgramArgs) -> TestLoaderAssociationPack:
+        ingested_data = test_loader_ingester.IngestData(parsed_options)
         return ingested_data.get_association_pack()

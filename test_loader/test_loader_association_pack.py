@@ -3,11 +3,11 @@ from runassociationtesting.association_pack import AssociationPack, ProgramArgs
 
 
 @dataclass
-class TestUploadProgramArgs(ProgramArgs):
+class TestLoaderProgramArgs(ProgramArgs):
     run_marker_tests: bool
 
 
-class TestUploadAssociationPack(AssociationPack):
+class TestLoaderAssociationPack(AssociationPack):
 
     def __init__(self, association_pack: AssociationPack):
 
