@@ -13,19 +13,14 @@ class LoadModule(ModuleLoader):
 
     def start_module(self) -> None:
 
-        with Path('start_worked.txt').open('w') as worked_file:
+        with Path(f'{self.output_prefix}.start_worked.txt').open('w') as worked_file:
             worked_file.write('module start worked')
 
         # Retrieve outputs – all tools _should_ append to the outputs object so they can be retrieved here.
         self.set_outputs(['start_worked.txt'])
 
     def _load_module_options(self) -> None:
-
-        self._parser.add_argument('--run_marker_tests',
-                                  help="Run per-marker tests for requested tool(s) [true]? Setting to false could "
-                                       "DRASTICALLY reduce run-time (particularly if --tool saige). Only changes "
-                                       "output for burden tests where tool = saige, regenie, or bolt.",
-                                  dest='run_marker_tests', action='store_true')
+        pass
 
     def _parse_options(self) -> TestLoaderProgramArgs:
         return TestLoaderProgramArgs(**vars(self._parser.parse_args(self._split_options(self._input_args))))

@@ -4,7 +4,7 @@ from runassociationtesting.association_pack import AssociationPack, ProgramArgs
 
 @dataclass
 class TestLoaderProgramArgs(ProgramArgs):
-    run_marker_tests: bool
+    pass
 
 
 class TestLoaderAssociationPack(AssociationPack):
