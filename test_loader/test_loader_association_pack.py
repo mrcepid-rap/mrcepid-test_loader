@@ -4,7 +4,8 @@ from runassociationtesting.association_pack import AssociationPack, ProgramArgs
 
 @dataclass
 class TestLoaderProgramArgs(ProgramArgs):
-    pass
+    def _check_opts(self):
+        pass
 
 
 class TestLoaderAssociationPack(AssociationPack):
