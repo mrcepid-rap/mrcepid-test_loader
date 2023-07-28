@@ -13,11 +13,12 @@ class LoadModule(ModuleLoader):
 
     def start_module(self) -> None:
 
-        with Path(f'{self.output_prefix}.start_worked.txt').open('w') as worked_file:
+        start_test = Path(f'{self.output_prefix}.start_worked.txt')
+        with start_test.open('w') as worked_file:
             worked_file.write('module start worked')
 
         # Retrieve outputs – all tools _should_ append to the outputs object so they can be retrieved here.
-        self.set_outputs(['start_worked.txt'])
+        self.set_outputs([start_test])
 
     def _load_module_options(self) -> None:
         pass
