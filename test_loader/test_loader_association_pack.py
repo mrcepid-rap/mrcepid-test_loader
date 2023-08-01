@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from runassociationtesting.association_pack import AssociationPack, ProgramArgs
+from general_utilities.import_utils.module_loader.association_pack import AssociationPack, ProgramArgs
 
 
 @dataclass
