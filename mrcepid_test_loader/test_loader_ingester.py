@@ -1,5 +1,5 @@
 from general_utilities.import_utils.module_loader.ingest_data import IngestData
-from test_loader.test_loader_association_pack import TestLoaderProgramArgs, TestLoaderAssociationPack
+from mrcepid_test_loader.test_loader_association_pack import TestLoaderProgramArgs, TestLoaderAssociationPack
 
 
 class TestLoaderIngestData(IngestData):
