@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from runassociationtesting.module_loader import ModuleLoader
+from general_utilities.import_utils.module_loader.module_loader import ModuleLoader
 from test_loader import test_loader_ingester
 from test_loader.test_loader_association_pack import TestLoaderProgramArgs, TestLoaderAssociationPack
 
